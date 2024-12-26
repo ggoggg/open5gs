@@ -392,7 +392,8 @@ int pcrf_db_qos_data(
     /* For EPC, we need to inialize Flow-Status in Pcc-Rule */
     for (i = 0; i < session_data->num_of_pcc_rule; i++) {
         ogs_pcc_rule_t *pcc_rule = &session_data->pcc_rule[i];
-        pcc_rule->flow_status = OGS_DIAM_RX_FLOW_STATUS_ENABLED;
+        //pcc_rule->flow_status = OGS_DIAM_RX_FLOW_STATUS_ENABLED;
+        pcc_rule->flow_status_r = OGS_DIAM_RX_FLOW_STATUS_DISABLED;
     }
 
     ogs_free(supi);

@@ -537,7 +537,7 @@ typedef struct ogs_pcc_rule_s {
     ogs_flow_t flow[OGS_MAX_NUM_OF_FLOW_IN_PCC_RULE];
     int num_of_flow;
 
-    int flow_status;
+    int flow_status_r;
     uint32_t precedence;
     uint32_t rating_group;
 
@@ -567,7 +567,7 @@ typedef struct ogs_pcc_rule_s {
             ogs_assert((__dST)->flow[__iNDEX].description); \
         } \
         (__dST)->num_of_flow = (__sRC)->num_of_flow; \
-        (__dST)->flow_status = (__sRC)->flow_status; \
+        (__dST)->flow_status_r = (__sRC)->flow_status_r; \
         (__dST)->precedence = (__sRC)->precedence; \
         memcpy(&(__dST)->qos, &(__sRC)->qos, sizeof(ogs_qos_t)); \
     } while(0)

@@ -968,7 +968,7 @@ bool pcf_npcf_policyauthorization_handle_create(pcf_sess_t *sess,
 
             memcpy(&pcc_rule->qos, &db_pcc_rule->qos, sizeof(ogs_qos_t));
 
-            pcc_rule->flow_status = db_pcc_rule->flow_status;
+            pcc_rule->flow_status_r = db_pcc_rule->flow_status_r;
             pcc_rule->precedence = db_pcc_rule->precedence;
 
             /* Install Flow */
@@ -1415,7 +1415,7 @@ bool pcf_npcf_policyauthorization_handle_update(
 
             memcpy(&pcc_rule->qos, &db_pcc_rule->qos, sizeof(ogs_qos_t));
 
-            pcc_rule->flow_status = db_pcc_rule->flow_status;
+            pcc_rule->flow_status_r = db_pcc_rule->flow_status_r;
             pcc_rule->precedence = db_pcc_rule->precedence;
 
             /* Install Flow */

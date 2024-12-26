@@ -840,7 +840,7 @@ int pcrf_gx_send_rar(
 
                 memcpy(&pcc_rule->qos, &db_pcc_rule->qos, sizeof(ogs_qos_t));
 
-                pcc_rule->flow_status = db_pcc_rule->flow_status;
+                pcc_rule->flow_status_r = db_pcc_rule->flow_status_r;
                 pcc_rule->precedence = db_pcc_rule->precedence;
 
                 /* Install Flow */
@@ -1272,7 +1272,7 @@ static int encode_pcc_rule_definition(
 
     ret = fd_msg_avp_new(ogs_diam_gx_flow_status, 0, &avpch2);
     ogs_assert(ret == 0);
-    val.i32 = pcc_rule->flow_status;
+    val.i32 = pcc_rule->flow_status_r;
     ret = fd_msg_avp_setvalue(avpch2, &val);
     ogs_assert(ret == 0);
     ret = fd_msg_avp_add(avpch1, MSG_BRW_LAST_CHILD, avpch2);

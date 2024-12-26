@@ -1466,7 +1466,7 @@ static int decode_pcc_rule_definition(
             }
             break;
         case OGS_DIAM_GX_AVP_CODE_FLOW_STATUS:
-            pcc_rule->flow_status = hdr->avp_value->i32;
+            pcc_rule->flow_status_r = hdr->avp_value->i32;
             break;
         case OGS_DIAM_GX_AVP_CODE_QOS_INFORMATION:
             ret = fd_avp_search_avp(avpch2,
