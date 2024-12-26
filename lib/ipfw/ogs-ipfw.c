@@ -167,6 +167,7 @@ int ogs_ipfw_compile_rule(ogs_ipfw_rule_t *ipfw_rule, char *flow_description)
 
 char *ogs_ipfw_encode_flow_description(ogs_ipfw_rule_t *ipfw_rule)
 {
+    ogs_info("ogs_ipfw_encode_flow_description");
     char flow_description[OGS_HUGE_LEN];
     char *p, *last;
     char buf[OGS_ADDRSTRLEN];
